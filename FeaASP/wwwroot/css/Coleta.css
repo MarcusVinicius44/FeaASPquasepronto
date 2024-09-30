@@ -1,0 +1,129 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    padding: 0;
+}
+
+.hero {
+    width: 100%;
+    text-align: center;
+}
+
+    .hero h1 {
+        background: url('flowers.jpg') no-repeat center center/cover;
+        color: #fe9e0d;
+        padding: 60px 20px;
+        border-radius: 8px;
+        margin-top: -45px; /* Ajuste a margem superior para subir o título */
+        font-size: 4em;
+    }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px; /* Ajuste a posição do contêiner */
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Espaçamento inferior para separar do mapa */
+}
+
+.localização {
+    color: white;
+    background: linear-gradient(90deg, rgba(254,171,98,1) 0%, rgba(242,152,61,1) 53%, rgba(255,120,0,1) 94%);
+    width: 45%; /* Largura do bloco de localização */
+    padding: 20px;
+    border-radius: 8px;
+    max-height: none; /* Remove a altura máxima para evitar rolagem */
+}
+
+    .localização h1 {
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1.2;
+    }
+
+.p {
+    font-size: 20px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+.localização img {
+    height: 50px;
+    width: auto;
+}
+
+.map-container {
+    width: 55%; /* Largura do contêiner do mapa */
+    margin: 0;
+}
+
+    .map-container iframe {
+        width: 100%;
+        height: 800px; /* Aumentar a altura para igualar ao bloco laranja */
+        border: 0;
+    }
+
+.passos {
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-left: 20px; /* Adiciona um padding à esquerda para mover os passos para a direita */
+}
+
+.passo {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px; /* Aumenta o padding para os blocos acima */
+    margin: 10px;
+    flex: 1 1 30%;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transição suave para o efeito de elevação */
+}
+
+    .passo:hover {
+        transform: translateY(-5px); /* Elevação ao passar o mouse */
+    }
+
+    .passo h3 {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .passo p {
+        color: #555;
+    }
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .localização, .map-container {
+        width: 90%; /* Largura total em telas menores */
+        margin: 10px 0; /* Margem vertical */
+    }
+
+    .passo {
+        flex: 1 1 100%; /* Cada passo ocupa a largura total */
+        max-width: none; /* Remove a largura máxima */
+    }
+}

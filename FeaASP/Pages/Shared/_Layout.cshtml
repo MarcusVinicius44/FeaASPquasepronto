@@ -1,0 +1,77 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEA</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <div class="nav-logo-container">
+                    <a href="/Index"><img src="~/Imagens/fotologo2.png" alt="Logo"></a>
+                </div>
+                <div class="navbar-links-container">
+                    <a href="/Index">Home</a>
+                    <a href="/Contato">Contato</a>
+                    <a href="/Coleta">Pontos de coleta</a>
+                    <a href="/Cadastroali">Cadastro de alimentos</a>
+                    <a href="/receitas">Receitiliza</a>
+                    <a href="/Nossospcr">Nossos Parceiros</a>
+                    <!--<button class="primary-button">
+                        <a href="/Login">Login</a>
+                    </button>-->
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="footer-wrapper">
+            <div class="footer-section-one">
+                <div class="footer-logo-container">
+                    <img src="~/Imagens/fotologo2.png" alt="Logo" />
+                </div>
+                <div class="footer-icons">
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section-two">
+                <div class="footer-section-columnsa">
+                    <span>Telefone:</span>
+                    <span>+55 (71) 99999-9999</span>
+                </div>
+                <div class="footer-section-columns">
+                    <span>Email:</span>
+                    <span>contact@feafood.com</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

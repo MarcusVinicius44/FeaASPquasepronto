@@ -1,0 +1,112 @@
+﻿@page
+@model SejaModel
+@{
+    ViewData["Title"] = "Contato";
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap">
+    <link rel="stylesheet" href="~/css/app.css">
+    <link rel="stylesheet" href="~/css/Seja.css">
+    <script>
+        function aplicarMascaraCNPJ(cnpj) {
+            cnpj = cnpj.replace(/\D/g, ''); // Remove caracteres não numéricos
+            cnpj = cnpj.replace(/^(\d{2})(\d)/, '$1.$2'); // XX.XXX.XXX
+            cnpj = cnpj.replace(/^(\d{2}\.\d{3})(\d)/, '$1.$2'); // XX.XXX.XXX/0001
+            cnpj = cnpj.replace(/^(\d{2}\.\d{3}\.\d{3})(\d)/, '$1/$2'); // XX.XXX.XXX/0001
+            cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2'); // XX.XXX.XXX/0001-XX
+            return cnpj;
+        }
+
+        function formatarCNPJ() {
+            const input = document.getElementById('cnpj');
+            input.value = aplicarMascaraCNPJ(input.value);
+        }
+
+        function aplicarMascaraTelefone(telefone) {
+            telefone = telefone.replace(/\D/g, ''); // Remove caracteres não numéricos
+            telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2'); // (XX) X
+            telefone = telefone.replace(/(\d)(\d{4})$/, '$1-$2'); // XX-XXXX
+            return telefone;
+        }
+
+        function formatarTelefone() {
+            const input = document.getElementById('telefone');
+            input.value = aplicarMascaraTelefone(input.value);
+        }
+
+        function aplicarMascaraCEP(cep) {
+            cep = cep.replace(/\D/g, ''); // Remove caracteres não numéricos
+            cep = cep.replace(/^(\d{5})(\d)/, '$1-$2'); // XXXXX-XX
+            return cep;
+        }
+
+        function formatarCEP() {
+            const input = document.getElementById('cep');
+            input.value = aplicarMascaraCEP(input.value);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="ctt">
+        <h2 class="mb-4">Seja Parceiro</h2>
+
+        <form id="contatoForm" method="post">
+            <div class="form-group Nome">
+                <label for="NomeEmpresa">Nome da empresa:</label>
+                <input type="text" name="Parceiros.NomeEmpresa" class="form-control" id="nome" placeholder="Digite o nome da empresa..." required>
+            </div>
+
+            <div class="form-group Email">
+                <label for="EmailEmpresa">Email:</label>
+                <input type="email" name="Parceiros.EmailEmpresa" class="form-control" id="email" placeholder="Digite o email da empresa..." required>
+            </div>
+
+            <div class="form-group Telefone">
+                <label for="telefoneEmpresa">Telefone:</label>
+                <input type="text" name="Parceiros.telefoneEmpresa" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15" oninput="formatarTelefone()" required>
+            </div>
+
+            <div class="form-group CNPJ">
+                <label for="CNPJ">CNPJ:</label>
+                <input type="text" name="Parceiros.CNPJ" class="form-control" id="cnpj" placeholder="XX.XXX.XXX/0001-XX" maxlength="18" oninput="formatarCNPJ()" required />
+            </div>
+
+            <div class="form-group Bairro">
+                <label for="CEP">CEP:</label>
+                <input type="text" name="Parceiros.CEP" class="form-control" id="cep" placeholder="XXXXX-XXX" maxlength="9" oninput="formatarCEP()" required />
+            </div>
+
+            <div class="form-group Mensagem">
+                <label for="msgparceiro">Motivação para parceria:</label>
+                <textarea class="form-control" name="Parceiros.msgparceiro" id="mensagem" rows="3" placeholder="Digite sua mensagem:" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary ctt-custom">Enviar</button>
+            
+        </form>
+    </div>
+    <script>    
+        18
+        document.getElementById('contatoForm').addEventListener('submit', function (event) {
+            const telefone = document.getElementById('telefone').value;
+            const cnpj = document.getElementById('cnpj').value;
+            if (cnpj.length > 18 || cnpj.length < 18)
+            if (telefone.length > 15 || telefone.length < 15) {
+                event.preventDefault();
+                alert('O número de telefone necessita de 11 caracteres.');
+                return false;
+            } else {
+                alert('Seu pedido de cadastro foi enviado! Aguarde retorno via email!');
+            }
+        });
+       
+    </script>
+
+</body>
+</html>

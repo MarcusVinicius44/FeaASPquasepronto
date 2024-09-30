@@ -1,0 +1,80 @@
+﻿.ctt {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: transparent;
+    color: #fe9e0d;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(300px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 70px;
+    margin-bottom: 50px; /* Aumente a margem inferior aqui */
+    left: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+.ctt .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ctt .col {
+    flex: 1;
+    min-width: calc(50% - 10px);
+}
+
+.ctt input,
+.ctt textarea {
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    font-size: 16px;
+    padding: 15px 20px;
+    color: #000000 !important;
+    box-sizing: border-box;
+}
+
+.ctt textarea {
+    height: auto;
+    min-height: 100px;
+}
+
+.ctt-custom {
+    width: 100%;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    background: #fe9e0d !important;
+    color: #fff;
+    padding: 15px 35px;
+}
+
+    .ctt-custom:hover {
+        background-color: #b4700af3 !important;
+        color: #ffffff;
+    }
+
+/* Estilos para o footer */
+footer {
+    margin-top: 105px; /* Adicione uma margem superior se necessário */
+    padding: 20px;
+    background-color: #333; /* Cor de fundo do footer */
+    color: #fff; /* Cor do texto do footer */
+    text-align: center; /* Centraliza o texto */
+}

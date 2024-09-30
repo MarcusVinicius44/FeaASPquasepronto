@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\fuctelefone.cshtml" />
+    <Content Remove="Pages\Shared\Cadastre-se.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\021.900248\Downloads\Lira-e-marcus-so-q-fez-master\Lira-e-marcus-so-q-fez-master\FEAasp\Pages\.editorconfig" />
+    <None Include="wwwroot\Imagens\about-background.png" />
+    <None Include="wwwroot\Imagens\assai.png" />
+    <None Include="wwwroot\Imagens\atacadao.jpg" />
+    <None Include="wwwroot\Imagens\Carrefour.jpg" />
+    <None Include="wwwroot\Imagens\celularfea.png" />
+    <None Include="wwwroot\Imagens\choose-image.png" />
+    <None Include="wwwroot\Imagens\delivery-image.png" />
+    <None Include="wwwroot\Imagens\fotologo2.png" />
+    <None Include="wwwroot\Imagens\fotopc.png" />
+    <None Include="wwwroot\Imagens\hiperieal.jpg" />
+    <None Include="wwwroot\Imagens\home-banner-background.png" />
+    <None Include="wwwroot\Imagens\home-banner-image.png" />
+    <None Include="wwwroot\Imagens\john-doe-image.png" />
+    <None Include="wwwroot\Imagens\pick-meals-image.png" />
+    <None Include="wwwroot\Imagens\redemix.jpg" />
+    <None Include="wwwroot\Imagens\sam.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\021.900248\Downloads\Lira-e-marcus-so-q-fez-master\Lira-e-marcus-so-q-fez-master\FEAasp\Pages\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.Data" Version="9.0.0" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>

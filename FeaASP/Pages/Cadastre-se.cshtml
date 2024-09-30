@@ -1,0 +1,57 @@
+﻿@page
+@model CadasModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie uma conta</title>
+    <link rel="stylesheet" href="~/css/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap">
+    <link rel="stylesheet" href="~/css/Login.css">
+    
+</head>
+<body>
+    <div class="cadastro-form">
+        <h2>Crie uma conta</h2>
+        <form id="loginForm">
+            <div class="input-box">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="email">Nome</label>
+                        <input type="text" class="form-control" id="email" placeholder="Digite seu nome " required>
+                    </div>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                </div>
+            </div>
+
+            <div class="remember-forgot">
+                <!-- Espaço para links de "lembrar-me" ou "esqueci a senha" -->
+            </div>
+
+            <button type="submit" class="btn btn-primary custom-button">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Lógica de autenticação aqui
+            alert('Formulário enviado!');
+        });
+    </script>
+</body>
+</html>
+

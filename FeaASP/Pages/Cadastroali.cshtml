@@ -1,0 +1,49 @@
+﻿@page
+@model FEAasp.Pages.Cadastro_doacoesModel
+@{
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alimentos Doados</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap">
+    <link href="~/css/cadastroali.css" rel="stylesheet" />
+    <link href="~/css/app.css" rel="stylesheet" />
+</head>
+<body>
+        <h1>Cadastro de Alimentos Doados</h1>
+        <form id="formCadastro">
+            <label for="marca">Marca do Alimento:</label>
+            <input type="text" id="marca" name="marca" required placeholder="Ex: Arroz Tio João">
+
+            <label for="nome">Nome do Alimento:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Ex: Arroz">
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" required>
+
+            <label for="validade">Data de Validade:</label>
+            <input type="date" id="validade" name="validade" required>
+
+            <button type="button" onclick="cadastrar()">Cadastrar</button>
+        </form>
+        <div id="mensagem"></div>
+    <script>
+        function cadastrar() {
+            const marca = document.getElementById('marca').value;
+            const nome = document.getElementById('nome').value;
+            const quantidade = document.getElementById('quantidade').value;
+            const validade = document.getElementById('validade').value;
+            const mensagemDiv = document.getElementById('mensagem');
+
+            if (marca && nome && quantidade && validade) {
+                mensagemDiv.innerHTML = `<p class="sucesso">Alimento ${nome} da marca ${marca} cadastrado com sucesso!</p>`;
+            } else {
+                mensagemDiv.innerHTML = `<p class="erro">Por favor, preencha todos os campos obrigatórios.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

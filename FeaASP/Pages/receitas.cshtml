@@ -1,0 +1,167 @@
+﻿@page
+@model ForumModel
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/app.css" />
+    <link rel="stylesheet" href="~/css/Forum.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #f6f6f6;
+            font-family: Arial, sans-serif;
+        }
+
+        .recipe-container {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .recipe-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .recipe-image {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .recipe-image img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+        .container h1 {
+            color: #fe9e0d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-4">Receitiliza</h1>
+
+        <div class="recipe-container">
+            <div class="recipe-content">
+                <h2>Petisco de Casca de Batata</h2>
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>200g de casca de batata</li>
+                    <li>1 ½ xícara de farinha de rosca</li>
+                    <li>1 xícara de leite</li>
+                    <li>2 ovos</li>
+                    <li>1 colher (chá) de alho em pó</li>
+                    <li>2 colheres (café) de sal</li>
+                </ul>
+                <p><strong>Modo de Preparo:</strong></p>
+                <p>Reserve as cascas das batatas e deixe descansar por 20 minutos em um recipiente com água. Prepare a mistura com leite, ovos, sal, pimenta, alho e cebola em pó. Escorra bem as cascas, passe na mistura com ovos, e depois, na farinha de trigo. Passe novamente na mistura, e, em seguida, na farinha de rosca. Frite em óleo bem quente.</p>
+            </div>
+            <div class="recipe-image">
+                <img src="https://static.itdg.com.br/images/auto-auto/c0064f8b12bb0878c4e0662b48e2311a/casca-de-batata.jpg" alt="Petisco de Casca de Batata" width="400px" height="400px">
+            </div>
+        </div>
+
+        <div class="recipe-container flex-row-reverse">
+            <div class="recipe-content">
+                <h2>Panqueca com Cascas de Cenoura</h2>
+                <p><strong>Ingredientes:</strong></p>
+                <p><strong>Para a Massa:</strong></p>
+                <ul>
+                    <li>½ kg de cascas de cenoura</li>
+                    <li>½ litro de leite</li>
+                    <li>3 ovos</li>
+                    <li>½ xícara de óleo</li>
+                    <li>2 xícaras de farinha de trigo</li>
+                    <li>¼ xícara de queijo parmesão</li>
+                    <li>Sal a gosto</li>
+                </ul>
+                <p><strong>Para o Recheio:</strong></p>
+                <ul>
+                    <li>150g de queijo</li>
+                    <li>1 colher (chá) de ervas aromáticas</li>
+                </ul>
+                <p><strong>Para o Molho Integral de Tomate:</strong></p>
+                <ul>
+                    <li>700g de tomates maduros</li>
+                    <li>1 dente de alho</li>
+                    <li>1 cebola</li>
+                    <li>1 pimentão</li>
+                    <li>1 colher (chá) de manjericão</li>
+                    <li>Pimenta do reino a gosto</li>
+                </ul>
+                <p><strong>Modo de Preparo:</strong></p>
+                <p><strong>Massa:</strong> Triture as cascas da cenoura e passe na peneira espremendo bem. Misture todos os ingredientes no liquidificador e bata até obter uma massa homogênea. Numa frigideira untada com óleo ou manteiga, faça os discos de panqueca e reserve.</p>
+                <p><strong>Molho:</strong> Doure a cebola, o alho e o pimentão no azeite. Em seguida, adicione os tomates, cortados grosseiramente, e os demais ingredientes, deixando cozinhar até reduzir bem. Triture no liquidificador e reserve.</p>
+            </div>
+            <div class="recipe-image">
+                <img src=" /Imagens/cascacenoura.jfif" alt="Cascas de Cenoura na Massa">
+                <br>
+                <br>
+
+            </div>
+        </div>
+
+        <div class="recipe-container">
+            <div class="recipe-content">
+                <h2>Doce de Casca de Melancia</h2>
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>3 xícaras de casca de melancia (parte branca)</li>
+                    <li>½ xícara de açúcar</li>
+                    <li>Canela em pau</li>
+                    <li>2 cravos</li>
+                    <li>1 xícara de água</li>
+                </ul>
+                <p><strong>Modo de Preparo:</strong></p>
+                <p>Lave as cascas da melancia, depois remova a primeira camada (verde) com ralador ou faca. Corte a parte branca em cubos pequenos e reserve. Coloque a água e o açúcar em uma panela pequena e deixe dissolver por 5 minutos em fogo baixo. Adicione a canela, o cravo e a casca de melancia cortada. Deixe cozinhar em fogo baixo durante 20 minutos, mexendo de vez em quando. Quando a casca estiver transparente e a calda estiver mais densa, desligue o fogo e coloque para esfriar. Leve à geladeira e sirva quando estiver frio.</p>
+                <p>Dica: Você também pode fazer essa receita com a casca ralada, utilizando toda a casca, inclusive a parte verde, e acrescentando coco ralado.</p>
+            </div>
+            <div class="recipe-image">
+                <img src=" /Imagens/Casca de melancia.jpg" alt="Doce de Casca de Melancia">
+            </div>
+        </div>
+
+        <div class="recipe-container flex-row-reverse">
+            <div class="recipe-content">
+                <h2>Bolo de Casca de Banana</h2>
+                <p><strong>Ingredientes:</strong></p>
+                <p><strong>Para a massa do bolo:</strong></p>
+                <ul>
+                    <li>Cascas de 8 bananas</li>
+                    <li>2 ovos</li>
+                    <li>2 xícaras de açúcar</li>
+                    <li>2 ½ xícaras de leite</li>
+                    <li>2 colheres (sopa) de manteiga</li>
+                    <li>2 xícaras de farinha de rosca</li>
+                    <li>1 colher (sopa) de fermento em pó</li>
+                    <li>Manteiga e farinha de trigo para untar a forma</li>
+                </ul>
+                <p><strong>Para a cobertura:</strong></p>
+                <ul>
+                    <li>1 xícara de açúcar de confeiteiro</li>
+                    <li>2 colheres (sopa) de caldo de limão</li>
+                    <li>1 Banana</li>
+                    <li>Canela</li>
+                </ul>
+                <p><strong>Modo de Preparo:</strong></p>
+                <p><strong>Massa:</strong> Lave as cascas de banana. Bata no liquidificador os ovos, o leite, o açúcar, a manteiga e as cascas de banana. Coloque essa mistura em uma vasilha e adicione a farinha de rosca aos poucos, mexendo bem. Por último, misture delicadamente o fermento. Despeje a massa numa forma untada e polvilhada com farinha de trigo. Leve ao forno pré-aquecido a 180°C por cerca de 35 minutos. Retire o bolo do forno e deixe amornar antes de desenformar. Polvilhe o bolo com açúcar de confeiteiro e canela ou prepare a cobertura a seguir.</p>
+                <p><strong>Cobertura:</strong> Numa tigela pequena, misture bem o açúcar com o caldo de limão até ficar liso. Espalhe sobre o bolo e deixe endurecer.</p>
+            </div>
+            <div class="recipe-image">
+                <img src=" /Imagens/Bolo-casca-banana.jpg" alt="Bolo de Casca de Banana" width="450PX" height="400px">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

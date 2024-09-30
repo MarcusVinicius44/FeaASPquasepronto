@@ -1,0 +1,11 @@
+@FeaASP_HostAddress = http://localhost:5169
+
+GET {{FeaASP_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{FeaASP_HostAddress}}/todos/1
+Accept: application/json
+
+###

@@ -1,0 +1,79 @@
+﻿@page
+@model FEAasp.Pages.ContatoModel
+@{
+    ViewData["Title"] = "Contato";
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap">
+    <link href="~/css/app.css" rel="stylesheet" />
+    <link href="~/css/Contato.css" rel="stylesheet" />
+    <script>
+        function aplicarMascaraTelefone(telefone) {
+            telefone = telefone.replace(/\D/g, ''); // Remove caracteres não numéricos
+            telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2'); // (XX) X
+            telefone = telefone.replace(/(\d)(\d{4})$/, '$1-$2'); // XX-XXXX
+            return telefone;
+        }
+
+        function formatarTelefone() {
+            const input = document.getElementById('telefoneContato');
+            input.value = aplicarMascaraTelefone(input.value);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="ctt">
+        <h2 class="mb-4">Fale Conosco</h2>
+
+        <form id="contactForm" method="post">
+            <div class="form-group mb-4">
+                <label for="nomeContato">Nome</label>
+                <input type="text" class="form-control" id="nomeContato" name="contato.nomeContato" placeholder="Digite seu nome:" required>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="emailContato">E-mail</label>
+                <input type="email" class="form-control" id="emailContato" name="contato.emailContato" placeholder="Digite seu e-mail:" required>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="telefoneContato">Número</label>
+                <input type="text" class="form-control" id="telefoneContato" name="contato.telefoneContato" placeholder="(XX) XXXXX-XXXX" required maxlength="15" oninput="formatarTelefone()">
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="mensagem">Mensagem</label>
+                <textarea class="form-control" id="mensagem" name="contato.mensagem" placeholder="Digite sua mensagem" required></textarea>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary ctt-custom">Enviar</button>
+        </form>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            const telefone = document.getElementById('telefoneContato').value;
+
+            if (telefone.length > 15 || telefone.length < 15) {
+                event.preventDefault();
+                alert('O número de telefone necessita de 11 caracteres.');
+                return false;
+            } else {
+                alert('Sua mensagem foi enviada para nós, obrigado!');
+            }
+        });
+    </script>
+
+</body>
+</html>

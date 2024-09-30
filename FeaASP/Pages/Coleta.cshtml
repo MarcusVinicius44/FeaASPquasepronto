@@ -1,0 +1,74 @@
+﻿@page
+@model ColetaModel
+@{
+    ViewData["Title"] = "Coleta";
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta em Salvador</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap">
+    <link href="~/css/Coleta.css" rel="stylesheet" />
+    <link href="~/css/app.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Como doar para o FEA?</h1>
+    </div>
+
+    <div class="container">
+        <div class="passos">
+            <div class="passo">
+                <div class="icone">
+                    <img src="/Imagens/cadastro.jpeg" alt="Ícone de casa">
+                </div>
+                <h3>Passo 1</h3>
+                <p>Cadastre-se no Fea ou se já é cadastrado faça apenas o login.</p>
+            </div>
+
+            <div class="passo">
+                <div class="icone">
+                    <img src="/Imagens/produtos.jpeg" alt="Ícone de envio">
+                </div>
+                <h3>Passo 2</h3>
+                <p>Pesquise os pontos de coleta mais próximos de você.</p>
+                <p>Os pontos de coleta aceitam somente alimentos não perecíveis.</p>
+            </div>
+
+            <div class="passo">
+                <div class="icone">
+                    <img src="/Imagens/doacoes.jpeg" alt="Ícone de benefícios">
+                </div>
+                <h3>Passo 3</h3>
+                <p>Cadastre o seu alimento, marca, quantidade para ficar salvo no seu registro.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="localização">
+            <h1>Onde já combatemos o desperdício em Salvador:</h1>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Aeroporto</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Boca do Rio</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Cabula</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Dom Avelar</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Engenho Velho de Brotas</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Fazenda Grande I</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Garcia</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Itapuã</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Nazaré</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Jaguaripe</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Lapinha</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Mussurunga</p>
+            <p class="p"><img src="../Imagens/localizacao.png" alt="Localização" /> Americana</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15553.943854478775!2d-38.38569225!3d-12.94072555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1725645671482!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
